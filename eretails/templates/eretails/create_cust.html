@@ -1,0 +1,21 @@
+{% extends 'eretails/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class = "row">
+    <div class = "col-md"><br>
+        <div class = "card card_body">
+
+            <form action = "" method = "POST">
+            {% csrf_token %}
+            {{ custform }}
+            <br>
+            <input class = "btn btn-sm btn-info" 
+            type = "submit" name = "submit"></input>
+            </form>
+        </div>
+    </div>
+</div><hr>
+<br>
+
+{% endblock %}

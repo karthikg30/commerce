@@ -1,0 +1,26 @@
+{% extends 'eretails/base.html' %}
+{% load  static %}
+{% block content%}
+
+<div class = "row"> 
+    <div class = "col-md-6">
+        <div class = "card card-body">
+
+
+            <form action = "{% url 'delete_order' item.id %}" method = "POST"> 
+                {% csrf_token %}
+                
+                <br><br>
+                <h4> Are you sure to delete {{item}}? </h4><hr>
+
+                <a href = "{% url 'Home' %}" > Cancel </a>
+                <input type = "submit" name = "delete"> </input>
+            </form>
+
+
+        </div> 
+    </div>
+</div>
+
+
+{% endblock %}
